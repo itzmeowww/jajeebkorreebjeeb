@@ -1,7 +1,7 @@
 <script>
   import Tailwindcss from "./Tailwindcss.svelte";
 
-  let festivals = ["มาฆบูชา", "สงกรานต์", "ปีใหม่"];
+  const festivals = ["วาเลนไทน์", "มาฆบูชา", "สงกรานต์", "ปีใหม่"]
 </script>
 
 <Tailwindcss />
@@ -14,18 +14,19 @@
 
       <div>
         <h2 class="my-2 inline">เดี๋ยวไม่ทัน</h2>
-        <h2 class="my-2 inline line-through">วาเลนไทน์</h2>
+        <h2 class="my-2 inline line-through"> {festivals[0]}.</h2>
       </div>
+      
       {#each festivals as festival, i}
-        {#if i != festivals.length - 1}
+        {#if i != festivals.length - 1 && i != 0}
           <h2 class="my-2 ml-20 line-through">{festival}</h2>
-        {:else}
+        {:else if i != 0}
           <h2 class="my-2 ml-20">{festival}</h2>
         {/if}
       {/each}
     </div>
     <a
-      class="text-lg mt-36"
+      class="text-lg mt-36 no-underline"
       href="https://twitter.com/SkyandSunn/status/1447135525614219264?s=20"
       >ที่มา</a
     >
