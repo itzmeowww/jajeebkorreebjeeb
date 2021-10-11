@@ -66,3 +66,11 @@ button:not(:disabled):active {
 button:focus {
     border-color: #666;
 }
+
+.crossed {
+    color: #78A2CC
+}
+
+.non-crossed {
+    color: #ff6961
+}

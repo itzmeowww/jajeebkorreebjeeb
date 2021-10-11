@@ -19,9 +19,9 @@
       
       {#each festivals as festival, i}
         {#if i != festivals.length - 1 && i != 0}
-          <h2 class="my-2 ml-20 line-through">{festival}</h2>
+          <h2 class="my-2 ml-20 line-through non-crossed">{festival}</h2>
         {:else if i != 0}
-          <h2 class="my-2 ml-20">{festival}</h2>
+          <h2 class="my-2 ml-20 crossed">{festival}</h2>
         {/if}
       {/each}
     </div>
