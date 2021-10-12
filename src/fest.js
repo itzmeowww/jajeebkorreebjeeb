@@ -38,4 +38,12 @@ export const festivals = [{
     month: 1
 }]
 
-export default festivals;
+export const sortedFestivals = festivals.slice().sort( (a,b)=>{
+  if (a.month === b.month){
+     if (a.date > b.date) {
+       return 1;
+     } 
+    return -1;
+  }
+  return a.month - b.month;
+})
