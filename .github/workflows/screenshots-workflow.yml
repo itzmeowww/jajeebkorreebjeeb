@@ -12,5 +12,5 @@ jobs:
       - name: Screenshot Website
         uses: swinton/screenshot-website@v1.x
         with:
-          source: https://github.com/swinton/screenshot-website
+          source: https://jajeebkorreebjeeb.vercel.app/
           destination: public/preview_img.png
