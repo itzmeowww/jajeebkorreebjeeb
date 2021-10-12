@@ -1,10 +1,12 @@
 # จะจีบก็รีบจีบ เดี๋ยวไม่ทัน...
 
-Inspired by : https://twitter.com/SkyandSunn/status/1447135525614219264/photo/1
+## Inspiration
+
+https://twitter.com/SkyandSunn/status/1447135525614219264/photo/1
 
 ![จะจีบก็รีบจีบ](https://pbs.twimg.com/media/FBVCFlvVkAQlu_l?format=jpg&name=medium)
 
-# Start
+## Run this project
 
 1. Install packages
 
@@ -18,9 +20,11 @@ yarn
 yarn dev
 ```
 
-# Idea for contribution
+## Contribute to this project
 
-- Better Design
-- Make the past festivals correspond with current date and further festival: เดี๋ยวไม่ทันฮาโลวีน
+[CONTRIBUTING.md](CONTRIBUTING.md)
 
-Created from https://github.com/sarioglu/svelte-tailwindcss-template template.
+```
+Created from https://github.com/sarioglu/
+svelte-tailwindcss-template template.
+```
