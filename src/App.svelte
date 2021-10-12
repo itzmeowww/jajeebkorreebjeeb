@@ -1,7 +1,11 @@
 <script>
   import Tailwindcss from "./Tailwindcss.svelte";
+  import { festivals } from "./fest";
 
-  const festivals = ["วาเลนไทน์", "มาฆบูชา", "สงกรานต์", "ปีใหม่"]
+  var now = new Date()
+  function isBefore(date) {
+    return new Date(date.toDateString()) < new Date(new Date().toDateString());
+  }
 </script>
 
 <Tailwindcss />
@@ -14,14 +18,19 @@
 
       <div>
         <h2 class="my-2 inline">เดี๋ยวไม่ทัน</h2>
-        <h2 class="my-2 inline line-through"> {festivals[0]}.</h2>
+        
+          {#if isBefore(new Date(now.getFullYear(), festivals[0].month, festivals[0].date))}
+            <h2 class="my-2 inline line-through"> {festivals[0].name}.</h2>
+          {:else}
+            <h2 class="my-2 inline">{festivals[0].name}.</h2>
+          {/if}
       </div>
       
       {#each festivals as festival, i}
-        {#if i != festivals.length - 1 && i != 0}
-          <h2 class="my-2 ml-20 line-through non-crossed">{festival}</h2>
-        {:else if i != 0}
-          <h2 class="my-2 ml-20 crossed">{festival}</h2>
+        {#if isBefore(new Date(now.getFullYear(), festivals[i].month, festivals[i].date)) && i != 0}
+          <h2 class="my-2 ml-20 line-through non-crossed">{festival.name}</h2>
+        {:else if i != 0 && isBefore(new Date(now.getFullYear(), festivals[i-1].month, festivals[i-1].date))}
+          <h2 class="my-2 ml-20 crossed">{festival.name}</h2>
         {/if}
       {/each}
     </div>
