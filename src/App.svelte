@@ -3,8 +3,13 @@
   import { festivals } from "./fest";
 
   var now = new Date()
-  function isBefore(date) {
-    return new Date(date.toDateString()) < new Date(new Date().toDateString());
+  function createDate(date, month, offset){
+    return new Date(now.getFullYear() + offset, month - 1, date)
+  }
+
+  function isBefore(date, month, offset) {
+    var day = createDate(date, month, offset);
+    return new Date(day.toDateString()) < new Date(new Date().toDateString());
   }
 </script>
 
@@ -19,7 +24,7 @@
       <div>
         <h2 class="my-2 inline">เดี๋ยวไม่ทัน</h2>
         
-          {#if isBefore(new Date(now.getFullYear(), festivals[0].month, festivals[0].date))}
+          {#if isBefore(festivals[0].date, festivals[0].month, festivals[0].offset)}
             <h2 class="my-2 inline line-through"> {festivals[0].name}.</h2>
           {:else}
             <h2 class="my-2 inline">{festivals[0].name}.</h2>
@@ -27,9 +32,9 @@
       </div>
       
       {#each festivals as festival, i}
-        {#if isBefore(new Date(now.getFullYear(), festivals[i].month, festivals[i].date)) && i != 0}
+        {#if isBefore(festivals[i].date, festivals[i].month, festivals[i].offset) && i != 0}
           <h2 class="my-2 ml-20 line-through non-crossed">{festival.name}</h2>
-        {:else if i != 0 && isBefore(new Date(now.getFullYear(), festivals[i-1].month, festivals[i-1].date))}
+        {:else if i != 0 && isBefore(festivals[i - 1].date, festivals[i - 1].month, festivals[i - 1].offset)}
           <h2 class="my-2 ml-20 crossed">{festival.name}</h2>
         {/if}
       {/each}

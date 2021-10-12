@@ -1,19 +1,23 @@
 export const festivals = [{
     name: "วาเลนไทน์",
     date: 14,
-    month: 1
+    month: 2,
+    offset: false
 }, {
     name: "สงกรานต์",
     date: 13,
-    month: 3
+    month: 4,
+    offset: false
 }, {
     name: "ฮาโลวีน",
     date: 31,
-    month: 9
+    month: 10,
+    offset: false
 }, {
     name: "ปีใหม่",
     date: 31,
-    month: 11
+    month: 12,
+    offset: true
 }]
 
 export default festivals;
