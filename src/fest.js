@@ -9,8 +9,20 @@ export const festivals = [{
     date: 14,
     month: 2
 }, {
+    name: "วันตรุษจีน",
+    date: 12,
+    month: 2
+},{
+    name: "มาฆบูชา",
+    date: 26,
+    month: 2
+}, {
     name: "สงกรานต์",
     date: 13,
+    month: 4
+},{
+    name: "วันจักรี",
+    date: 6,
     month: 4
 }, {
     name: "ฮาโลวีน",
