@@ -7,6 +7,7 @@ on:
 jobs:
   screenshot:
     name: Screenshot
+    runs-on: windows-latest
     steps:
       - name: Screenshot Website
         uses: swinton/screenshot-website@v1.x
