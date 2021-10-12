@@ -1,4 +1,4 @@
-name: CI for Node.js Project
+name: CI for screenshot
 on:
   push:
     branches: [master]
