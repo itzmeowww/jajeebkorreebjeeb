@@ -1,0 +1,5 @@
+- name: Screenshot Website
+  uses: swinton/screenshot-website@v1.x
+  with:
+    source: https://github.com/swinton/screenshot-website
+    destination: public/preview_image.png
