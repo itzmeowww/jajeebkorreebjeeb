@@ -12,7 +12,7 @@ export const festivals = [{
     name: "วันตรุษจีน",
     date: 12,
     month: 2
-},{
+}, {
     name: "มาฆบูชา",
     date: 26,
     month: 2
@@ -20,7 +20,7 @@ export const festivals = [{
     name: "สงกรานต์",
     date: 13,
     month: 4
-},{
+}, {
     name: "วันจักรี",
     date: 6,
     month: 4
@@ -38,12 +38,15 @@ export const festivals = [{
     month: 1
 }]
 
-export const sortedFestivals = festivals.slice().sort( (a,b)=>{
-  if (a.month === b.month){
-     if (a.date > b.date) {
-       return 1;
-     } 
-    return -1;
-  }
-  return a.month - b.month;
+export const sortedfestivals = festivals.slice().sort((a, b) => {
+    if (a.month === 1 && a.date === 1) {
+        return 1;
+    }
+    if (a.month === b.month) {
+        if (a.date > b.date) {
+            return 1;
+        }
+        return -1;
+    }
+    return a.month - b.month;
 })

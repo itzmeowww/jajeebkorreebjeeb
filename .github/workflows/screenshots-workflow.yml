@@ -13,4 +13,4 @@ jobs:
         uses: swinton/screenshot-website@v1.x
         with:
           source: https://jajeebkorreebjeeb.vercel.app/
-          destination: public/preview_img.png
+          destination: preview_img.png
