@@ -30,7 +30,6 @@
 
 <svelte:head>
   <title>จะจีบก็รีบจีบ เดี๋ยวไม่ทัน{now_event}</title>
-  <meta name="twitter:title" content="จะจีบก็รีบจีบ เดี๋ยวไม่ทัน{now_event}" />
 </svelte:head>
 
 <Tailwindcss />
