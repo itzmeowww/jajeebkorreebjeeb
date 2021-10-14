@@ -17,7 +17,12 @@ jobs:
         uses: swinton/screenshot-website@v1.x
         with:
           source: https://jajeebkorreebjeeb.vercel.app/
-          destination: preview_img.png
+          destination: preview_img.png      
+      - uses: actions/download-artifact@v2
+        with:
+          name: preview_img.png
+      - name: Display structure of downloaded files
+        run: ls -R
       - name: Commit files
         run: |
           git config --global user.email "winthanasan@gmail.com"
