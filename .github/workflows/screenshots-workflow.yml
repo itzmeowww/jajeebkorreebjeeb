@@ -20,6 +20,8 @@ jobs:
           destination: preview_img.png
       - name: Commit files
         run: 
+          git config --global user.email "winthanasan@gmail.com"
+          git config --global user.name "Thanasan Kumdee"
           git commit -m "Add changes" -a
       - name: Push changes
         uses: ad-m/github-push-action@master
