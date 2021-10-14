@@ -19,7 +19,7 @@ jobs:
           source: https://jajeebkorreebjeeb.vercel.app/
           destination: preview_img.png
       - name: Commit files
-        run: 
+        run: |
           git config --global user.email "winthanasan@gmail.com"
           git config --global user.name "Thanasan Kumdee"
           git commit -m "Add changes" -a
