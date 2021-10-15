@@ -19,7 +19,7 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: preview_img
-          path: public/preview_img.png
+          path: public/
       - name: Commit files
         run: |
           git config --global user.email "winthanasan@gmail.com"
