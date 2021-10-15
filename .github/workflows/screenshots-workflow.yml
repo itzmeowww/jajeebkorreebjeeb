@@ -24,7 +24,7 @@ jobs:
         run: |
           git config --global user.email "winthanasan@gmail.com"
           git config --global user.name "Thanasan Kumdee"
-          git add preview_img.png
+          git add public/preview_img.png
           git commit -m "Add changes" -a
       - name: Push changes
         uses: ad-m/github-push-action@master
