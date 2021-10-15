@@ -16,17 +16,17 @@ jobs:
         uses: swinton/screenshot-website@v1.x
         with:
           source: https://jajeebkorreebjeeb.vercel.app/
-          destination: preview_img.png      
+          destination: preview_image.png      
       - uses: actions/download-artifact@v2
         with:
-          name: preview_img
+          name: preview_image
           path: public/
       - name: Commit files
         run: |
           git config --global user.email "winthanasan@gmail.com"
           git config --global user.name "Thanasan Kumdee"
-          git add public/preview_img.png
-          git commit -m "Add changes" -a
+          git add public/preview_image.png
+          git commit -m "Update Website Preview Image" -a
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
