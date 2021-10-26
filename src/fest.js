@@ -29,6 +29,10 @@ export const festivals = [{
     date: 31,
     month: 10
 }, {
+    name: "บั้งไฟแม่น้ําโขงนาค",
+    date: 25,
+    month: 12
+}, {
     name: "คริสมาสต์",
     date: 25,
     month: 12
