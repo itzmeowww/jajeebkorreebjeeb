@@ -13,10 +13,6 @@ export const festivals = [{
     date: 12,
     month: 2
 }, {
-    name: "มาฆบูชา",
-    date: 26,
-    month: 2
-}, {
     name: "สงกรานต์",
     date: 13,
     month: 4
@@ -40,6 +36,19 @@ export const festivals = [{
     name: "ปีใหม่",
     date: 1,
     month: 1
+}, {
+    name: "สิ้นปี",
+    date: 31,
+    month: 12
+}
+, {
+    name: "วันเมษาหน้าโง่",
+    date: 1,
+    month: 4
+}, {
+    name: "วันรัฐธรรมนูญ",
+    date: 10,
+    month: 12
 }]
 
 export const sortedfestivals = festivals.slice().sort((a, b) => {
